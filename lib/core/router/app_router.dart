@@ -1,7 +1,7 @@
 import 'package:go_router/go_router.dart';
 
 import '../../features/auth/login_screen.dart';
-import '../../features/home/home_placeholder_screen.dart';
+import '../../features/home/home_screen.dart';
 import '../../features/splash/splash_screen.dart';
 import '../supabase/supabase_service.dart';
 import 'go_router_refresh_stream.dart';
@@ -29,7 +29,7 @@ class AppRouter {
     routes: [
       GoRoute(path: splash, builder: (context, state) => const SplashScreen()),
       GoRoute(path: login, builder: (context, state) => const LoginScreen()),
-      GoRoute(path: home, builder: (context, state) => const HomePlaceholderScreen()),
+      GoRoute(path: home, builder: (context, state) => const HomeScreen()),
     ],
   );
 }
