@@ -16,4 +16,11 @@ class SettingsRepository {
       'available_hours': hours,
     });
   }
+
+  Future<void> updateSettings({bool? notificationsEnabled, String? reminderTime}) async {
+    final payload = <String, dynamic>{'user_id': SupabaseService.currentUser!.id};
+    if (notificationsEnabled != null) payload['notifications_enabled'] = notificationsEnabled;
+    if (reminderTime != null) payload['reminder_time'] = reminderTime;
+    await SupabaseService.client.from('settings').upsert(payload);
+  }
 }

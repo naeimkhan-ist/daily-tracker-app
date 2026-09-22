@@ -10,13 +10,17 @@ Work-in-progress, built screen by screen. Current state:
 - [x] Supabase schema (`profiles`, `subjects`, `tasks`, `study_sessions`, `daily_checkins`, `settings`) with row-level security
 - [x] Screen: Splash
 - [x] Screen: Login (Google via Supabase Auth)
-- [ ] Screen: Home dashboard
-- [ ] Screen: Add/Edit task & study session
-- [ ] Screen: Analytics (Learning Overview / Study Analytics)
-- [ ] Screen: Subjects/Categories
-- [ ] Screen: Settings
-- [ ] Web build → Vercel (PWA)
-- [ ] Android build (APK)
+- [x] Screen: Home dashboard (daily challenge, week streak, available hours, today's tasks)
+- [x] Screen: Add task (bottom sheet — title, subject, due date, priority)
+- [x] Screen: Log study session (bottom sheet — duration presets + subject)
+- [x] Screen: Analytics (weekly minutes chart, days-on-track, study time, per-subject breakdown)
+- [x] Screen: Subjects/Categories (grid + add-subject dialog)
+- [x] Screen: Settings (profile, daily reminder toggle + time, sign out)
+- [x] Bottom-nav shell (Home / Analytics / Subjects / Settings)
+- [x] Web build → Vercel (PWA) — live at https://daily-tracker-app-nklab.vercel.app
+- [ ] Android build (APK) — workflow committed, waiting on the GitHub push (see below)
+- [ ] Google OAuth provider enabled in the Supabase dashboard (manual step, credentials supplied by the user)
+- [ ] Push to GitHub — blocked from the dev sandbox by a git-proxy repo-authorization restriction; see the zip delivered to the user with 2-command push instructions
 
 ## Tech stack
 

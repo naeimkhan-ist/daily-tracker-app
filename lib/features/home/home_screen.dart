@@ -6,6 +6,7 @@ import '../../core/supabase/supabase_service.dart';
 import '../../core/theme/app_colors.dart';
 import '../../data/models/daily_checkin.dart';
 import '../../data/models/task_item.dart';
+import '../tasks/add_task_sheet.dart';
 import 'providers/home_providers.dart';
 
 class HomeScreen extends ConsumerWidget {
@@ -310,11 +311,7 @@ class _TodaySection extends ConsumerWidget {
                     .titleMedium
                     ?.copyWith(fontWeight: FontWeight.w700)),
             TextButton(
-              onPressed: () {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('Add task — coming in a later checkpoint')),
-                );
-              },
+              onPressed: () => showAddTaskSheet(context),
               child: const Text('Add'),
             ),
           ],

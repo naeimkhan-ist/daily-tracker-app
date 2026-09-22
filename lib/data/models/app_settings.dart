@@ -30,4 +30,16 @@ class AppSettings {
       notificationsEnabled: notificationsEnabled,
     );
   }
+
+  AppSettings copyWith({
+    Map<String, bool>? availableHours,
+    String? reminderTime,
+    bool? notificationsEnabled,
+  }) {
+    return AppSettings(
+      availableHours: availableHours ?? this.availableHours,
+      reminderTime: reminderTime ?? this.reminderTime,
+      notificationsEnabled: notificationsEnabled ?? this.notificationsEnabled,
+    );
+  }
 }
