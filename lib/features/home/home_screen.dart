@@ -4,7 +4,6 @@ import 'package:intl/intl.dart';
 
 import '../../core/supabase/supabase_service.dart';
 import '../../core/theme/app_colors.dart';
-import '../../data/models/daily_checkin.dart';
 import '../../data/models/task_item.dart';
 import '../tasks/add_task_sheet.dart';
 import 'providers/home_providers.dart';
@@ -321,15 +320,15 @@ class _TodaySection extends ConsumerWidget {
             padding: EdgeInsets.symmetric(vertical: 24),
             child: Center(child: CircularProgressIndicator()),
           ),
-          error: (e, st) => Padding(
-            padding: const EdgeInsets.symmetric(vertical: 16),
+          error: (e, st) => const Padding(
+            padding: EdgeInsets.symmetric(vertical: 16),
             child: Text('Couldn\'t load today\'s tasks.',
                 style: TextStyle(color: AppColors.error)),
           ),
           data: (tasks) {
             if (tasks.isEmpty) {
-              return Padding(
-                padding: const EdgeInsets.symmetric(vertical: 16),
+              return const Padding(
+                padding: EdgeInsets.symmetric(vertical: 16),
                 child: Text('Nothing planned yet — add your first task.',
                     style: TextStyle(color: AppColors.textSecondary)),
               );

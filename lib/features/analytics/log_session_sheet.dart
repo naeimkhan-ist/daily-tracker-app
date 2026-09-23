@@ -83,7 +83,7 @@ class _LogSessionSheetState extends ConsumerState<_LogSessionSheet> {
                     .titleLarge
                     ?.copyWith(fontWeight: FontWeight.w700)),
             const SizedBox(height: 6),
-            Text('Logged as ending now.',
+            const Text('Logged as ending now.',
                 style: TextStyle(color: AppColors.textSecondary, fontSize: 13)),
             const SizedBox(height: 18),
             Wrap(

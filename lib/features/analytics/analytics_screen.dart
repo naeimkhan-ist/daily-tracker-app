@@ -242,7 +242,7 @@ class _SubjectBreakdown extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (sessions.isEmpty) {
-      return Text('Log a study session to see your subject breakdown.',
+      return const Text('Log a study session to see your subject breakdown.',
           style: TextStyle(color: AppColors.textSecondary));
     }
     final byId = {for (final s in subjects) s.id: s};

@@ -56,10 +56,10 @@ class SubjectsScreen extends ConsumerWidget {
                 ),
                 data: (subjects) {
                   if (subjects.isEmpty) {
-                    return SliverFillRemaining(
+                    return const SliverFillRemaining(
                       child: Center(
                         child: Padding(
-                          padding: const EdgeInsets.all(32),
+                          padding: EdgeInsets.all(32),
                           child: Text(
                             'No subjects yet. Tap + to add one — subjects group your tasks and study sessions.',
                             textAlign: TextAlign.center,

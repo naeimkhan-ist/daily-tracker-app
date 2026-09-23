@@ -91,7 +91,7 @@ class SettingsScreen extends ConsumerWidget {
                       title: const Text('Daily reminder'),
                       subtitle: const Text('Nudge me if I haven\'t checked in'),
                       value: settings.notificationsEnabled,
-                      activeColor: AppColors.primary,
+                      activeThumbColor: AppColors.primary,
                       onChanged: (value) async {
                         await ref
                             .read(settingsRepositoryProvider)
